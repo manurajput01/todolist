@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0.4px;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(200, 200, 239);
+      }
+      h1 {
+        text-align: center;
+      }
+      .container {
+        width: 400px;
+        height: auto;
+        margin: 50px auto;
+        background-color: rgb(200, 200, 239);
+      }
+
+      .container input {
+        width: 100%;
+        height: 2rem;
+        outline: none;
+        padding: 5px;
+        margin: 5px;
+      }
+
+      li {
+        list-style-type: none;
+        width: 100%;
+        height: 2rem;
+        background-color: rgb(200, 200, 239);
+        color: white;
+        font-size: 1.1rem;
+        padding: 5px;
+        border: 1px solid white;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px gray;
+        margin: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      li svg {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
+
+      .show {
+        display: block;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .todo-input {
+        background-color: inherit;
+        color: inherit;
+        font-size: large;
+        border: 0;
+        width: 80% !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TODO LIST</h1>
+
+    <div class="container">
+      <input type="text" name="search" placeholder="search-something" onkeyup="searchTodo(this)">
+      
+      <ul></ul>
+
+      <form id="add_todo" onsubmit="submitTodohandler(event)">
+        <input type="text" name="add" placeholder="Add todos..." />
+      </form>
+    </div>
+    <script src="./todolist.js"></script>
+  </body>
+</html>
